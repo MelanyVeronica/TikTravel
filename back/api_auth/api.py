@@ -9,7 +9,7 @@ from django.contrib.sessions.backends.db import SessionStore
 from django.core.exceptions import PermissionDenied
 from ninja.security import django_auth
 import vue_view.views
-from api_auth.models import Picture
+from api_auth.models import Picture, ProfilePic
 from back.settings import REDIRECT_BASE, DEBUG
 from django.shortcuts import redirect
 from back import settings
@@ -77,6 +77,6 @@ def upload_user_pics(request, profile_pic_file: UploadedFile = File(...)): # atr
 
 @api.post("/upload-profile-pic")
 def upload_profile_pic(request, page_pic_file: UploadedFile = File(...)): # atributo name del input tiene que ser igual a pic_file
-    Picture.objects.update_or_create(user=request.user, pic=page_pic_file)
+    ProfilePic.objects.update_or_create(user=request.user, pic=page_pic_file)
     return redirect(request.headers['Referer'])
 

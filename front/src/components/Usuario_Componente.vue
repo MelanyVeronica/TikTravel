@@ -180,7 +180,7 @@
                                     <div class="py-1">
                                         <span class="px-1 text-sm text-gray-600">Foto de perfil</span>
                                         <input type="hidden" name="csrfmiddlewaretoken" :value="csrf_token_form">
-                                        <input required placeholder="" type="file" name="profile_pic_file"
+                                        <input required value="" placeholder="" type="file" name="profile_pic_file" accept="image/png, image/jpeg"
                                             class="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none">
                                     </div>
 

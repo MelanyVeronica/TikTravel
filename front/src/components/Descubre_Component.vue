@@ -92,9 +92,9 @@
 
     </div>
 
-    <div class="flex justify-center pt-40 p-20">
+    <div class="overflow-y-scroll max-h-[40rem] pt-4 px-1 mx-auto">
 
-      <Card_Descubre v-for="i in discover_data" :key="i.id" :profile_img_src="i['profile_pic']" :username="i['username']" :user_imgs_srcs="i['user_pics']"/>
+      <Card_Descubre class="px-1 mx-auto" v-for="i in discover_data" :key="i.id" :profile_img_src="i['profile_pic']" :username="i['username']" :user_imgs_srcs="i['user_pics']"/>
      
     </div>
 
@@ -130,3 +130,38 @@
       </div>
   </div>
 </template>
+
+<style>
+
+.fade-in {
+opacity: 0;
+animation: fade-in-animation 2s ease-in forwards;
+}
+
+@keyframes fade-in-animation {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+section {
+scrollbar-width: none; 
+-ms-overflow-style: none; 
+}
+
+section::-webkit-scrollbar {
+display: none; 
+}
+
+::-webkit-scrollbar{
+display: none;
+}
+
+*{
+scrollbar-width: none; 
+-ms-overflow-style: none; 
+}
+</style>

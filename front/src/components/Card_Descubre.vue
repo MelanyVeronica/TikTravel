@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="bg-slate-800 text-white rounded-lg w-full mx-5 md:w-[40rem]  space-y-6 p-10">
+    <div class="bg-slate-800 text-white rounded-lg w-full md:w-[40rem] space-y-6 p-10 mb-10 px-1 mx-auto">
       <!-- header -->
       <div class="flex space-x-4 items-center">
         <div class="w-12 h-12">

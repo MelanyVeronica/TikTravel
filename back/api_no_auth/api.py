@@ -15,11 +15,12 @@ from django.shortcuts import redirect
 from django.db.utils import IntegrityError
 from back import settings
 from django.core.exceptions import ObjectDoesNotExist
+from back.settings import REDIRECT_BASE, DEBUG
 
 if settings.DEBUG:
     medial_url = '/' + settings.MEDIA_URL
 else:
-    medial_url = ''
+    medial_url = settings.REDIRECT_BASE
 
 
 api = NinjaAPI(csrf=False)

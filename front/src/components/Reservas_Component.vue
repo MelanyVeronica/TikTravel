@@ -1,5 +1,5 @@
 <script setup>
-    import Card from '../components/Card.vue'
+    import Card from '../components/Card_Reservas.vue'
     import {UserStatusStore} from '@/stores/user_status'
     const user_store = UserStatusStore();
     if (!(user_store.is_logged)) {

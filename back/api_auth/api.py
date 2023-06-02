@@ -17,7 +17,7 @@ from back import settings
 if settings.DEBUG:
     medial_url = '/' + settings.MEDIA_URL
 else:
-    medial_url = ''
+    medial_url = settings.REDIRECT_BASE
 
 #########
 

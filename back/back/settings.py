@@ -158,6 +158,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # debug only settings
+DEBUG = True
 if DEBUG:
     import logging
     from corsheaders.defaults import default_headers
@@ -168,6 +169,14 @@ if DEBUG:
     CSRF_TRUSTED_ORIGINS = ('http://localhost:5173/*', 'http://localhost:5173', 'http://localhost:5173/')
     SESSION_COOKIE_DOMAIN = 'localhost'
     CSRF_COOKIE_DOMAIN = 'localhost'
+
+    
+    ####################
+    REDIRECT_BASE = 'https://tiktravel.herokuapp.com/' # https://tiktravel.herokuapp.com/, ''
+    SESSION_COOKIE_DOMAIN = 'tiktravel.herokuapp.com'
+    CSRF_COOKIE_DOMAIN = 'tiktravel.herokuapp.com'
+    WHITENOISE_USE_FINDERS = True
+    WHITENOISE_ROOT = MEDIA_ROOT
 
     #################
 

@@ -126,6 +126,7 @@
           console.log(response);
           user_store.yes_logged();
           usern.value = response.data['username'];
+          profile_pic_url.value = response.data['profile_pic_src'];
           profile_path.value = { name: 'user', params: { username: (response.data['username']) }};
           // get_profile_pic();
       })
@@ -140,7 +141,7 @@
   }
   api_login_status();
   window.setInterval(api_login_status, 2*60*1000);
-  get_profile_pic();
+  // get_profile_pic();
   // if (user_store.is_logged) {
   //   get_profile_pic();
   // }

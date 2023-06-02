@@ -109,12 +109,12 @@
 </script>
 
 <template>
-    <div class="min-h-screen bg-gray-300">
+    <div class="min-h-screen bg-blue-100">
     <div>
         <div v-if="user_found">
             <section v-if="self_page">
                 <div class="max-w-2xl mx-auto pt-4">
-                    <div class="sm:p-8 bg-gray-200 sm:rounded-lg shadow-xl">
+                    <div class="sm:p-8 bg-blue-200 sm:rounded-lg shadow-xl">
                         <h1 class="uppercase font-extrabold text-2xl text-center border-b-2 border-black">Configurar Información del Perfil</h1>
                         <form class="mt-8" x-data="{password: '',password_confirm: ''}">
                             <div class="mx-auto max-w-lg ">

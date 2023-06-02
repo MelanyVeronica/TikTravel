@@ -12,16 +12,26 @@ import vue_view.views
 from api_auth.models import Picture
 from back.settings import REDIRECT_BASE, DEBUG
 from django.shortcuts import redirect
+from back import settings
+
+if settings.DEBUG:
+    medial_url = '/' + settings.MEDIA_URL
+else:
+    medial_url = ''
 
 #########
 
 
 api = NinjaAPI(csrf=True, auth=django_auth, urls_namespace='api_auth')
 
+from api_auth.models import Picture, ProfilePic
 
 @api.get("/hi")
 def hello(request):
-    return api.create_response(request, {'success': True, "message": "Hii, you're still logged in!", 'username': request.user.username}, status=200)
+    # user = User.objects.get(username=data.current_user_page[6:-1])
+    pic = ProfilePic.objects.get(user_id=request.user.id)
+    pic = medial_url+str(pic.pic)
+    return api.create_response(request, {'success': True, "message": "Hii, you're still logged in!", 'username': request.user.username, "profile_pic_src": pic}, status=200)
 
 from django.http import HttpRequest, HttpResponse
 from django.middleware.csrf import get_token

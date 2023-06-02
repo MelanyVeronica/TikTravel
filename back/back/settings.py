@@ -27,7 +27,7 @@ VUE_DIR = os.path.join(VUE_DIR, 'front')
 SECRET_KEY = 'django-insecure-t0ov=_q4)4xrf!r**_w09igw3quu_+f@=lq*uu+6v3*+o^k3(&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-os.environ['DEBUG'] = 'False'
+os.environ['DEBUG'] = 'True'
 
 if os.environ['DEBUG'] == 'False':
     DEBUG = False

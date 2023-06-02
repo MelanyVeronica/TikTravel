@@ -15,11 +15,11 @@ var styles_list = [
 
     <div class="flex items-center min-h-screen">
 
-        <div class="text-center px-10 pl-28">
-            <h1 id="animacion"> <p id="text" class="show md:text-6xl text-white">Descubre el mundo con nosotros <br> ¡ Tu aventura comienza aquí !</p></h1>
+        <div class="text-center px-10 pl-28 hidden lg:block">
+            <h1 id="animacion"> <p id="text" class="show lg:text-4xl xl:text-6xl text-white">Descubre el mundo con nosotros <br> ¡ Tu aventura comienza aquí !</p></h1>
         </div>
 
-        <section class='px-2 overflow-y-scroll max-h-[40rem] fade-in'>
+        <section class='px-2 overflow-y-scroll max-h-[40rem] mx-auto'>
           <Card v-for="item in styles_list" :key="item.id" :bg_img_src="item"/>
         </section>
 

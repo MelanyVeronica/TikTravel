@@ -12,8 +12,8 @@
 </script>
 
 <template>
-      <div class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-400 via-blue-100 to-gray-100 min-h-screen">
-        <section class='flex justify-center pt-52'>
+      <div class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-400 via-blue-100 to-gray-100 min-h-screen mx-auto">
+        <section class='flex justify-center pt-52 mx-auto'>
           <Card v-for="item in styles_list" :key="item.id" :bg_img_src="item"/>
         </section>
       </div>
